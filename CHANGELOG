@@ -1,0 +1,204 @@
+--- -------------------------------------------
+--- Version 2.0.28 - 2021-09-13
+--- -------------------------------------------
+[BUG] - Fix Phpass reference error in the installer  
+
+--- -------------------------------------------
+--- Version 2.0.27 - 2021-09-13
+--- -------------------------------------------
+[MSC] - Overall fixes
+[UPD] - Updated composer packages
+
+--- -------------------------------------------
+--- Version 2.0.26 - 2021-09-13
+--- -------------------------------------------
+[CHG] - Changed the password hashing library since the old one has been removed by the author 
+[UPD] - Updated composer packages
+
+--- -------------------------------------------
+--- Version 2.0.25 - 2021-09-13
+--- -------------------------------------------
+[ADD] - Added ability to enable/disable only the editor for the ckeditor extension  
+[ADD] - Added ability to use the file manager in backend even if the WYSIWYG editor is disabled. See Backend > Email Templates > File Manager 
+[ADD] - Added ability to use the file manager in customer even if the WYSIWYG editor is disabled. See Customer > Email Templates > File Manager 
+[BUG] - Segments would return wrng results count when using fields + campaign actions for condition
+[UPD] - Updated composer packages
+
+--- -------------------------------------------
+--- Version 2.0.24 - 2021-08-25
+--- -------------------------------------------
+[CHG] - Switched the Cron Expression Parser library  
+[BUG] - Fix failed delivery when using performance flags to not take delivery usage logs into consideration were set
+[UPD] - Updated composer packages
+
+--- -------------------------------------------
+--- Version 2.0.23 - 2021-08-23
+--- -------------------------------------------
+[ADD] - Added ability to notify system admins via email when cron jobs don't run  
+[RMV] - Removed the 'backend_dashboard_console_command_history_check_list' filter hook  
+[ADD] - Added the 'console_command_list_model_get_command_map_check_interval' filter hook
+[BUG] - When not using PCNTL, customer would go over assigned quota under certain circumstances  
+[CHG] - Mutex checks will happen each 10ms instead of each second, resulting in faster response times  
+[IMP] - Much faster delivery speed  
+
+--- -------------------------------------------
+--- Version 2.0.22 - 2021-08-04
+--- -------------------------------------------
+[RMV] - Removed unused libraries from composer.json  
+[CHG] - We're no longer using Queue Tables for Autoresponders + Segments. More at https://forum.mailwizz.com/threads/were-thinking-to-remove-the-queue-tables-feature.7738/  
+[MSC] - Overall fixes
+[UPD] - Updated composer packages
+
+--- -------------------------------------------
+--- Version 2.0.21 - 2021-07-26
+--- -------------------------------------------
+[ENH] - The send-transactional-emails command now makes use of PCNTL for faster processing  
+[ADD] - Added select2 for selects with multiple items to ease finding the desired select value(s) 
+[ADD] - Added DMARC record suggestion for sending domains  
+
+--- -------------------------------------------
+--- Version 2.0.20 - 2021-07-14
+--- -------------------------------------------
+[ADD] - Add [SUBSCRIBE_URL] and [SUBSCRIBE_LINK] tags  
+[ENH] - Better handling for campaigns that use timewarp  
+[MSC] - Overall fixes
+[UPD] - Updated composer packages
+
+--- -------------------------------------------
+--- Version 2.0.19 - 2021-07-12
+--- -------------------------------------------
+[ENH] - Allow removal of delivery server types which the application does not support anymore  
+[ENH] - Disable php-mail server types if they exist, since we don't use them anymore  
+[ADD] - Add html_purify function to easily access the htmlpurifier object
+[ENH] - Better output filtering 
+[BUG] - When Recaptcha is enabled and user enter correct login details but did not fill the captcha would allow user to login on a second submission without checking the captcha, since the login was already done before captcha was reached
+
+--- -------------------------------------------
+--- Version 2.0.18 - 2021-07-09
+--- -------------------------------------------
+[ENH] - Give more time to timewarp to complete sending, 7 days instead of just 36 hours
+[ENH] - Better handling of email validation in custom fields when email is empty
+[ADD] - Showing the campaign delivery servers in the step confirm and quick overview
+[ADD] - Added ability to filter the Delivery server logs by delivery_for column
+[ADD] - Added new notification and new email template for when a campaign pending approval is approved 
+[ADD] - Added ability to disapprove a campaign that is pending approval
+[ADD] - Added new notification and new email template for when a campaign pending approval is disapproved 
+[BUG] - When posting to a subscribe form with curl and curl would follow redirect, if the email was part of the list, we'd lose the email address field from the subscriber object  
+
+--- -------------------------------------------
+--- Version 2.0.17 - 2021-06-29
+--- -------------------------------------------
+[MSC] - Overall fixes
+[UPD] - Updated composer packages
+
+--- -------------------------------------------
+--- Version 2.0.16 - 2021-06-28
+--- -------------------------------------------
+[BUG] - Fix issue with bounce processing because of wrong type casting
+[BUG] - Fix queue bug with queue items being reprocessed while they were still processing
+[MSC] - Overall fixes
+[UPD] - Updated composer packages
+
+--- -------------------------------------------
+--- Version 2.0.15 - 2021-06-22
+--- -------------------------------------------
+[MSC] - Overall fixes
+[UPD] - Updated composer packages
+
+--- -------------------------------------------
+--- Version 2.0.14 - 2021-06-22
+--- -------------------------------------------
+[BUG] - Extension update message/action was not properly shown in backend area
+[CHG] - Better handling for when GD is missing and we try to resize
+[MSC] - Overall fixes
+[UPD] - Updated composer packages
+
+--- -------------------------------------------
+--- Version 2.0.13 - 2021-06-21
+--- -------------------------------------------
+[CHG] - Do not disable the API on auto update
+[CHG] - PHP's proc_open is now required only for Sendmail delivery server type
+[BUG] - Fix a type error when doing str_replace on a null value
+[MSC] - Overall fixes
+[UPD] - Updated composer packages
+
+--- -------------------------------------------
+--- Version 2.0.12 - 2021-06-21
+--- -------------------------------------------
+[MSC] - Overall fixes
+[UPD] - Updated composer packages
+
+--- -------------------------------------------
+--- Version 2.0.11 - 2021-06-16
+--- -------------------------------------------
+[MSC] - Overall fixes
+[UPD] - Updated composer packages
+
+--- -------------------------------------------
+--- Version 2.0.10 - 2021-06-09
+--- -------------------------------------------
+[ADD] - Added ability for lists to add Open Graph tags for the subscription page
+[MSC] - Overall fixes
+[UPD] - Updated composer packages
+
+--- -------------------------------------------
+--- Version 2.0.9 - 2021-05-10
+--- -------------------------------------------
+[MSC] - Overall fixes
+[UPD] - Updated composer packages
+
+--- -------------------------------------------
+--- Version 2.0.8 - 2021-05-06
+--- -------------------------------------------
+[MSC] - Overall fixes
+[UPD] - Updated composer packages
+
+--- -------------------------------------------
+--- Version 2.0.7 - 2021-05-03
+--- -------------------------------------------
+[MSC] - Overall fixes
+[UPD] - Updated composer packages
+
+--- -------------------------------------------
+--- Version 2.0.6 - 2021-04-14
+--- -------------------------------------------
+[ADD] - Added the 'none' visibility for custom fields
+[CHG] - The 'hidden' visibility for custom fields will render the fields in form but will hide them
+[CHG] - The 'none' visibility for custom fields will NOT render the fields in the form
+[MSC] - Overall fixes
+[UPD] - Updated composer packages
+
+--- -------------------------------------------
+--- Version 2.0.5 - 2021-03-11
+--- -------------------------------------------
+[MSC] - Overall fixes
+[UPD] - Updated composer packages
+
+--- -------------------------------------------
+--- Version 2.0.4 - 2021-03-10
+--- -------------------------------------------
+[MSC] - Overall fixes
+[UPD] - Updated composer packages
+
+--- -------------------------------------------
+--- Version 2.0.3 - 2021-03-03
+--- -------------------------------------------
+[MSC] - Overall fixes
+[UPD] - Updated composer packages
+
+--- -------------------------------------------
+--- Version 2.0.2 - 2021-03-01
+--- -------------------------------------------
+[MSC] - Overall fixes
+[UPD] - Updated composer packages
+
+--- -------------------------------------------
+--- Version 2.0.1 - 2021-03-01
+--- -------------------------------------------
+[MSC] - Overall fixes
+[UPD] - Updated composer packages
+
+--- -------------------------------------------
+--- Version 2.0.0 - 2021-02-26
+--- -------------------------------------------
+[RLS] - Initial release
